@@ -24,7 +24,7 @@
 ## Information architecture
 - Primary navigation: Demos, Abstract, Method, Results, Play Analysis, Resources
 - Core routes/screens: Single-page landing page with anchored sections
-- Content hierarchy: Demonstrations first, then framing, method, quantitative results, locally grounded analysis, and resources
+- Content hierarchy: Standard centered publication header and resource buttons, demonstrations, framing, method, quantitative results, locally grounded analysis, and resources
 
 ## Design principles
 - Lead with evidence: Put the result reel and paper figures ahead of long explanation
@@ -34,7 +34,7 @@
 
 ## Visual language
 - Color: Deep navy `#111844`, indigo `#4b5694`, steel blue `#7288ae`, warm paper `#eae0cf`, and off-white surfaces
-- Typography: Avenir-first system sans for body and interface; restrained serif accents only for editorial emphasis
+- Typography: Inter-first sans throughout for a familiar, readable academic-project-page presentation
 - Spacing/layout rhythm: Generous section spacing, compact cards, max-width reading columns
 - Shape/radius/elevation: Rounded panels with fine borders and soft shadows
 - Motion: Subtle reveal and hover transitions only; disabled under reduced-motion preferences
