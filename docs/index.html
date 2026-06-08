@@ -1,246 +1,322 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="RATs is a Robotic Agent Team that learns reusable manipulation skills through play.">
-  <meta name="theme-color" content="#111844">
-  <title>RATs | Playful Agentic Robot Learning</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <meta name="description" content="RATs: a Robotics Agent Team that learns reusable robot skills through autonomous play.">
+  <meta property="og:title" content="Playful Agentic Robot Learning">
+  <meta property="og:description" content="RATs learns reusable robot skills through autonomous play.">
+  <meta property="og:image" content="assets/images/rats-teaser.png">
+  <title>Playful Agentic Robot Learning | RATs</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/main.js"></script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header" data-header>
-    <nav class="nav shell" aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="RATs home">
-        <span class="brand-mark" aria-hidden="true">R</span>
-        <span>RATs</span>
-      </a>
-      <div class="nav-links">
-        <a href="#demos">Demos</a>
-        <a href="#method">Method</a>
-        <a href="#results">Results</a>
-        <a href="#analysis">Play Analysis</a>
-      </div>
-      <a class="nav-cta" href="assets/project-page/paper.pdf">Paper <span aria-hidden="true">↗</span></a>
-    </nav>
+<body id="top">
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="kicker"><span>RATs</span> / Robotics Agent Team</p>
+      <h1>Playful Agentic<br>Robot Learning</h1>
+      <p class="dek">Robots can practice before the task arrives.</p>
+      <div class="rule"></div>
+      <p class="authors">Anonymous Authors</p>
+      <p class="affiliation">CoRL 2026 Submission</p>
+      <nav class="publication-links" aria-label="Publication links">
+        <a class="button" href="assets/papers/playful-agentic-robot-learning.pdf">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6zM14 2v6h6M9 13h8M9 17h8"/></svg>
+          Paper
+        </a>
+        <a class="button" href="assets/papers/playful-agentic-robot-learning-appendix.pdf">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5"/></svg>
+          Appendix
+        </a>
+        <a class="button" href="https://github.com/Junyi42/rats">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 18c-4 1-4-2-5-2m10 4v-3c0-1 .1-1.5-.5-2 2 0 4-.5 4-4 0-1-.4-2-1-2.5.1-.5.5-2-.1-2.5 0 0-1-.3-3 1a10 10 0 0 0-5 0c-2-1.3-3-1-3-1-.6 1.5-.2 2-.1 2.5C3.4 9 3 10 3 11c0 3.5 2 4 4 4-.5.4-.6 1-.5 2v3"/></svg>
+          Code
+        </a>
+        <span class="button muted" aria-label="arXiv link coming soon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4l7 16M19 4l-7 16M8 10h8M7 14h10"/></svg>
+          arXiv soon
+        </span>
+      </nav>
+      <div class="rule"></div>
+    </div>
   </header>
 
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="shell hero-copy publication-header">
-        <p class="eyebrow reveal">RATs</p>
-        <h1 class="reveal">Playful Agentic Robot Learning</h1>
-        <p class="hero-deck reveal">
-          A Robotic Agent Team that learns reusable manipulation skills through self-directed play.
-        </p>
-        <p class="publication-note reveal">
-          RATs proposes novel yet learnable tasks, executes robot-code policies, and turns
-          successful experience into a persistent skill library.
-        </p>
-        <div class="hero-actions reveal">
-          <a class="button button-primary" href="assets/project-page/paper.pdf">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h8"/></svg>
-            Paper
-          </a>
-          <a class="button button-secondary" href="assets/project-page/appendix.pdf">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 0 1 3 3v13a3 3 0 0 0-3-3H4z"/><path d="M20 4h-6a3 3 0 0 0-3 3v13a3 3 0 0 1 3-3h6z"/></svg>
-            Appendix
-          </a>
-          <a class="button button-secondary" href="https://github.com/Junyi42/rats">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/></svg>
-            Code
-          </a>
+  <main>
+    <section class="section demo-lead" aria-labelledby="demo-heading">
+      <div class="narrow">
+        <div class="section-heading">
+          <p class="eyebrow">Pipeline video</p>
+          <h2 id="demo-heading">From play to reusable skill</h2>
         </div>
-      </div>
-
-      <div class="shell demo-wrap reveal" id="demos">
-        <div class="demo-heading">
+        <div class="video-placeholder video-placeholder-lead" data-video="assets/videos/pipeline-overview.mp4">
+          <div class="play-mark" aria-hidden="true"></div>
           <div>
-            <p class="section-kicker">Qualitative results</p>
-            <h2>Nine tasks. One growing skill library.</h2>
+            <strong>Full pipeline demo coming soon</strong>
+            <span>Task proposal, agent-team execution, verification, and skill reuse</span>
           </div>
-          <div class="demo-tags" aria-label="Demo composition">
-            <span>6 simulation</span>
-            <span>3 real-world</span>
-            <span>2:05 reel</span>
-          </div>
+          <code>pipeline-overview.mp4</code>
         </div>
-        <div class="video-frame">
-          <video controls playsinline preload="metadata" poster="assets/project-page/teaser.png">
-            <source src="assets/project-page/results-reel.mp4" type="video/mp4">
-            Your browser does not support embedded video.
-            <a href="assets/project-page/results-reel.mp4">Download the result reel.</a>
-          </video>
-        </div>
-        <p class="media-note">Simulation and real-world examples from the final paper result reel.</p>
       </div>
     </section>
 
-    <section class="section intro-section" id="abstract">
-      <div class="shell split-copy">
-        <div>
-          <p class="section-kicker">Abstract</p>
-          <h2>From one-shot code generation to persistent learning.</h2>
-        </div>
-        <div class="abstract-copy">
+    <section class="section intro-section" id="overview">
+      <div class="content-grid">
+        <aside class="contents" aria-label="Page contents">
+          <strong>Contents</strong>
+          <a href="#abstract">Abstract</a>
+          <a href="#method">Method</a>
+          <a href="#results">Results</a>
+          <a href="#deep-dive">Deep dive</a>
+          <a href="#analysis">Analysis</a>
+          <a href="#bibtex">BibTeX</a>
+        </aside>
+        <div class="prose">
           <p class="lead">
-            Code-as-Policy systems can synthesize executable robot programs, but typically solve each
-            task from scratch. RATs studies a different question: can an agentic robot improve before
-            evaluation by deliberately playing?
+            <mark>RATs learns before it is asked.</mark> The system uses self-directed play to
+            propose useful manipulation tasks, solve them with a specialized robot-agent team,
+            and distill successful behavior into callable code skills.
+          </p>
+          <figure class="wide-figure">
+            <img src="assets/images/rats-teaser.png" alt="Overview of RATs learning reusable robot skills through play">
+            <figcaption>Before downstream tasks arrive, RATs practices, diagnoses, and accumulates reusable skills.</figcaption>
+          </figure>
+
+          <h2 id="abstract">Abstract</h2>
+          <div class="heading-rule"></div>
+          <p>
+            Current agentic robot systems can write executable Code-as-Policy programs, observe
+            feedback, and revise behavior across attempts, but they remain largely task-driven.
+            RATs studies <em>Playful Agentic Robot Learning</em>, where an embodied coding agent
+            uses self-directed play as a continual skill-learning stage before downstream tasks
+            arrive.
           </p>
           <p>
-            During play, RATs proposes novel yet learnable tasks, plans and executes policies, verifies
-            intermediate progress, diagnoses failures, retries with feedback, and distills successful
-            executions into a persistent code skill library. The resulting experience can then support
-            held-out downstream tasks without changing model weights.
+            During play, RATs proposes novel yet learnable tasks, plans and executes robot-code
+            policies, verifies intermediate progress, diagnoses failures, retries with feedback,
+            and distills successful executions into a persistent code skill library. The resulting
+            skills improve held-out downstream tasks and can be plugged into other inference-time
+            Code-as-Policy agents without model finetuning.
           </p>
         </div>
       </div>
     </section>
 
     <section class="section method-section" id="method">
-      <div class="shell">
-        <div class="section-heading centered">
-          <p class="section-kicker">Our method</p>
-          <h2>A closed loop for curious, cumulative robot learning.</h2>
-          <p>RATs turns interaction into a reusable capability through three connected processes.</p>
+      <div class="narrow">
+        <div class="section-heading">
+          <p class="eyebrow">Method</p>
+          <h2>Learning through purposeful play</h2>
+          <p>RATs turns autonomous interaction into a persistent, reusable skill library.</p>
         </div>
-        <figure class="feature-figure reveal">
-          <img src="assets/project-page/method.png" alt="Overview of the RATs play-time learning and evaluation pipeline" loading="lazy">
-          <figcaption>RATs learns during play, freezes its accumulated knowledge, and reuses it at evaluation time.</figcaption>
-        </figure>
-        <div class="method-grid">
-          <article class="method-card reveal">
-            <span class="step-number">01</span>
-            <h3>Propose at the frontier</h3>
-            <p>The Task Proposer uses the scene, skill library, and failure memory to seek objectives that balance novelty with learnability.</p>
+        <div class="method-tabs" role="tablist" aria-label="Method stages">
+          <button class="tab active" type="button" role="tab" aria-selected="true" data-tab="propose">1. Propose</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="execute">2. Execute</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="verify">3. Verify</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="reuse">4. Reuse</button>
+        </div>
+        <div class="tab-panels">
+          <article class="tab-panel active" data-panel="propose">
+            <div>
+              <p class="panel-number">01</p>
+              <h3>Find the competence frontier</h3>
+              <p>The task proposer favors rarely tried object-skill combinations that remain learnable: neither trivial nor impossible.</p>
+            </div>
+            <img src="assets/images/task-proposal.png" alt="Examples of RATs play task proposals">
           </article>
-          <article class="method-card reveal">
-            <span class="step-number">02</span>
-            <h3>Execute as a team</h3>
-            <p>Planning, execution, and verification agents write policies, inspect progress, diagnose errors, and retry with targeted feedback.</p>
+          <article class="tab-panel" data-panel="execute" hidden>
+            <div>
+              <p class="panel-number">02</p>
+              <h3>Plan and write robot code</h3>
+              <p>A planning agent retrieves relevant skills, while execution agents turn the grounded plan into a robot-control program.</p>
+            </div>
+            <img src="assets/images/rats-method.png" alt="RATs agent team method overview">
           </article>
-          <article class="method-card reveal">
-            <span class="step-number">03</span>
-            <h3>Keep what transfers</h3>
-            <p>Successful behavior becomes reusable code; failed attempts become structured lessons that guide future proposals and executions.</p>
+          <article class="tab-panel" data-panel="verify" hidden>
+            <div>
+              <p class="panel-number">03</p>
+              <h3>Turn failures into feedback</h3>
+              <p>Goal and per-step verifiers localize failures. A diagnoser routes concrete feedback into retries or isolated SubAgent practice.</p>
+            </div>
+            <img src="assets/images/code-comparison.png" alt="Comparison between direct code synthesis and learned skills">
+          </article>
+          <article class="tab-panel" data-panel="reuse" hidden>
+            <div>
+              <p class="panel-number">04</p>
+              <h3>Carry skills into future tasks</h3>
+              <p>Successful routines become named code skills that can be retrieved, composed, and transferred to unseen environments.</p>
+            </div>
+            <img src="assets/images/skill-transfer.png" alt="Play-to-evaluation skill transfer lineage">
           </article>
         </div>
       </div>
     </section>
 
     <section class="section results-section" id="results">
-      <div class="shell">
-        <div class="section-heading results-heading">
+      <div class="wide">
+        <div class="section-heading">
+          <p class="eyebrow">Results</p>
+          <h2>Play pays off downstream</h2>
+        </div>
+        <div class="metrics" aria-label="Headline results">
+          <article><span>+20.6</span><strong>pp</strong><p>LIBERO-PRO over CaP-Agent0</p></article>
+          <article><span>+17.0</span><strong>pp</strong><p>MolmoSpaces over CaP-Agent0</p></article>
+          <article><span>+8.9</span><strong>pp</strong><p>RoboSuite cross-environment transfer</p></article>
+          <article><span>+8.8</span><strong>pp</strong><p>Preliminary real-world transfer</p></article>
+        </div>
+        <figure class="wide-figure result-figure">
+          <img src="assets/images/rats-sim-results.png" alt="Qualitative simulation comparisons">
+          <figcaption>Qualitative simulation results across LIBERO-PRO and MolmoSpaces.</figcaption>
+        </figure>
+
+        <div class="result-gallery-heading">
           <div>
-            <p class="section-kicker light">Paper-reported evaluation</p>
-            <h2>Play-time learning improves held-out tasks.</h2>
+            <h3>Result videos</h3>
+            <p>Three real-world demonstrations and six simulation demonstrations.</p>
           </div>
-          <p>
-            The final paper reports gains when the frozen learned skill library is used on downstream
-            manipulation tasks. These values are taken from the paper; the corresponding evaluation
-            artifacts are not present in this local repository snapshot.
-          </p>
+          <div class="filters" aria-label="Filter result videos">
+            <button class="filter active" type="button" data-filter="all">All</button>
+            <button class="filter" type="button" data-filter="real">Real world</button>
+            <button class="filter" type="button" data-filter="sim">Simulation</button>
+          </div>
         </div>
-        <div class="metric-grid">
-          <article class="metric-card reveal">
-            <p class="metric-context">LIBERO-PRO</p>
-            <p class="metric-value">+20.6<span> pp</span></p>
-            <p>23.2% <span aria-hidden="true">→</span> <strong>43.8%</strong></p>
+        <div class="video-grid">
+          <article class="result-video" data-kind="real">
+            <div class="video-placeholder real"><span>RW / 01</span><div class="play-mark"></div><code>real-world-01.mp4</code></div>
+            <h4>Pick up the red cube</h4><p>Simulation-learned skills reused on a physical robot.</p>
           </article>
-          <article class="metric-card reveal">
-            <p class="metric-context">MolmoSpaces</p>
-            <p class="metric-value">+17.0<span> pp</span></p>
-            <p>21.0% <span aria-hidden="true">→</span> <strong>38.0%</strong></p>
+          <article class="result-video" data-kind="real">
+            <div class="video-placeholder real"><span>RW / 02</span><div class="play-mark"></div><code>real-world-02.mp4</code></div>
+            <h4>Place cube in bowl</h4><p>Learned localization, transport, and release routines.</p>
           </article>
-          <article class="metric-card reveal">
-            <p class="metric-context">RoboSuite transfer</p>
-            <p class="metric-value">+8.9<span> pp</span></p>
-            <p>40.3% <span aria-hidden="true">→</span> <strong>49.1%</strong></p>
+          <article class="result-video" data-kind="real">
+            <div class="video-placeholder real"><span>RW / 03</span><div class="play-mark"></div><code>real-world-03.mp4</code></div>
+            <h4>Real-world transfer</h4><p>Additional physical-robot demonstration placeholder.</p>
+          </article>
+          <article class="result-video" data-kind="sim">
+            <div class="video-placeholder sim"><span>SIM / 01</span><div class="play-mark"></div><code>simulation-01.mp4</code></div>
+            <h4>LIBERO object generalization</h4><p>Reusing skills under object perturbations.</p>
+          </article>
+          <article class="result-video" data-kind="sim">
+            <div class="video-placeholder sim"><span>SIM / 02</span><div class="play-mark"></div><code>simulation-02.mp4</code></div>
+            <h4>LIBERO goal generalization</h4><p>Composing learned skills for new goals.</p>
+          </article>
+          <article class="result-video" data-kind="sim">
+            <div class="video-placeholder sim"><span>SIM / 03</span><div class="play-mark"></div><code>simulation-03.mp4</code></div>
+            <h4>LIBERO spatial generalization</h4><p>Adapting code skills to new arrangements.</p>
+          </article>
+          <article class="result-video" data-kind="sim">
+            <div class="video-placeholder sim"><span>SIM / 04</span><div class="play-mark"></div><code>simulation-04.mp4</code></div>
+            <h4>MolmoSpaces opening</h4><p>Geometry-aware grasp and pulling routines.</p>
+          </article>
+          <article class="result-video" data-kind="sim">
+            <div class="video-placeholder sim"><span>SIM / 05</span><div class="play-mark"></div><code>simulation-05.mp4</code></div>
+            <h4>MolmoSpaces picking</h4><p>Verified localization and top-down grasping.</p>
+          </article>
+          <article class="result-video" data-kind="sim">
+            <div class="video-placeholder sim"><span>SIM / 06</span><div class="play-mark"></div><code>simulation-06.mp4</code></div>
+            <h4>RoboSuite transfer</h4><p>Skills transferred across simulation environments.</p>
           </article>
         </div>
-        <div class="result-figures">
-          <figure class="paper-panel reveal">
-            <img src="assets/project-page/simulation-results.png" alt="Simulation evaluation results from the final paper" loading="lazy">
-            <figcaption>Simulation results reported in the final paper.</figcaption>
-          </figure>
-          <figure class="paper-panel reveal">
-            <img src="assets/project-page/realworld-results.png" alt="Real-world robot experiment results from the final paper" loading="lazy">
-            <figcaption>Real-world task execution examples.</figcaption>
-          </figure>
+        <figure class="wide-figure real-world-figure">
+          <img src="assets/images/rats-realworld.png" alt="RATs transferring simulation-learned skills to a physical robot">
+          <figcaption>RATs reuses the skill library learned during simulated play on real-world manipulation tasks.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section deep-dive-section" id="deep-dive">
+      <div class="narrow">
+        <div class="section-heading">
+          <p class="eyebrow">Detailed method</p>
+          <h2>A team built around useful feedback</h2>
+        </div>
+        <figure class="wide-figure">
+          <img src="assets/images/rats-method.png" alt="Detailed RATs method diagram">
+          <figcaption>RATs couples task proposal, team execution, verification, diagnosis, and memory updates.</figcaption>
+        </figure>
+        <div class="detail-grid">
+          <article><b>Planning</b><h3>Ground the attempt</h3><p>The planner turns each proposed task into ordered steps and retrieves only the skills relevant to those steps.</p></article>
+          <article><b>Execution</b><h3>Write and run code</h3><p>The Policy Writer generates executable robot-control programs. A SubAgent isolates persistent local bottlenecks.</p></article>
+          <article><b>Verification</b><h3>See what worked</h3><p>Goal and per-step verifiers separate final success from intermediate progress and make retries more targeted.</p></article>
+          <article><b>Memory</b><h3>Keep the useful parts</h3><p>Successful behavior becomes reusable code; failures become compact lessons that shape future practice.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section analysis-section" id="analysis">
-      <div class="shell">
-        <div class="section-heading centered">
-          <p class="section-kicker">Inside play</p>
-          <h2>Practice becomes skills, and failures become guidance.</h2>
-          <p>Unlike the evaluation summary above, this section describes locally available play-run artifacts.</p>
+      <div class="wide">
+        <div class="section-heading">
+          <p class="eyebrow">Analysis</p>
+          <h2>What the robot learns while playing</h2>
         </div>
-        <div class="analysis-stats">
-          <div><strong>49</strong><span>saved proposal records</span></div>
-          <div><strong>7</strong><span>interaction families</span></div>
-          <div><strong>30+</strong><span>object categories</span></div>
-          <div><strong>27</strong><span>learned helpers by iteration 50</span></div>
-        </div>
-        <div class="analysis-grid">
-          <figure class="analysis-card reveal">
-            <div class="figure-label">What the robot chooses to practice</div>
-            <img src="assets/project-page/play-objective-distribution.png" alt="Distribution of objectives proposed during play" loading="lazy">
-            <figcaption>Play covers varied interaction families and object categories instead of repeating a narrow objective.</figcaption>
-          </figure>
-          <figure class="analysis-card reveal">
-            <div class="figure-label">What the robot accumulates</div>
-            <img src="assets/project-page/play-knowledge-growth.png" alt="Growth of learned skills and failure memory during play" loading="lazy">
-            <figcaption>The skill library and structured failure memory grow together over 50 iterations.</figcaption>
-          </figure>
-        </div>
-        <div class="story-panel reveal">
-          <div class="story-copy">
-            <p class="section-kicker light">A proposal in context</p>
-            <h3>Why lift the tissue box?</h3>
-            <p>
-              At iteration 15, the proposer connected visible objects, recent attempts, and the current
-              skill library to select a tissue-box lift. Its composite Goldilocks score of
-              <strong>0.6236</strong> favored an objective that was meaningfully new while still reachable
-              with emerging grasp and motion capabilities.
-            </p>
-            <p class="story-detail">This is the core behavior RATs is designed to encourage: novel enough to teach, grounded enough to succeed.</p>
+        <div class="analysis-row">
+          <div class="analysis-copy">
+            <span class="analysis-index">A</span>
+            <h3>Play broadens the practiced objective set</h3>
+            <p>Across iterations, the proposer explores object-skill combinations rather than repeatedly sampling the same easy behavior.</p>
           </div>
-          <img src="assets/project-page/task-proposal-example.png" alt="Task proposal and selection example from iteration 15" loading="lazy">
+          <figure><img src="assets/images/play-objective-distribution.png" alt="Distribution of play objectives"><figcaption>Distribution of proposed play objectives.</figcaption></figure>
         </div>
+        <div class="analysis-row reverse">
+          <div class="analysis-copy">
+            <span class="analysis-index">B</span>
+            <h3>Knowledge accumulates across play</h3>
+            <p>The persistent skill library lets useful routines survive beyond a single episode and become ingredients for later tasks.</p>
+          </div>
+          <figure><img src="assets/images/play-knowledge-growth.png" alt="Growth of knowledge during play"><figcaption>Growth of the learned library through play.</figcaption></figure>
+        </div>
+        <div class="analysis-row">
+          <div class="analysis-copy">
+            <span class="analysis-index">C</span>
+            <h3>Skills compose differently by task</h3>
+            <p>Opening, closing, picking, and placement tasks retrieve distinct mixtures of learned perception, geometry, grasping, and motion helpers.</p>
+          </div>
+          <figure><img src="assets/images/eval-skill-category-heatmap.png" alt="Learned skill categories used during evaluation"><figcaption>Learned skill calls during MolmoSpaces evaluation.</figcaption></figure>
+        </div>
+        <figure class="wide-figure final-comparison">
+          <img src="assets/images/capx-rats-comparison.png" alt="Comparisons between direct synthesis and RATs with learned skills">
+          <figcaption>Direct synthesis repeatedly rebuilds low-level logic; RATs composes named, reusable skills.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="section resources-section" id="resources">
-      <div class="shell resources-panel">
-        <div>
-          <p class="section-kicker light">Resources</p>
-          <h2>Explore the full project.</h2>
-          <p>Read the final paper and appendix, or inspect the implementation and experiment configuration in the repository.</p>
+    <section class="section citation-section" id="bibtex">
+      <div class="narrow">
+        <div class="section-heading">
+          <p class="eyebrow">Citation</p>
+          <h2>BibTeX</h2>
         </div>
-        <div class="resource-links">
-          <a href="assets/project-page/paper.pdf"><span>Paper</span><small>PDF · 7.7 MB</small></a>
-          <a href="assets/project-page/appendix.pdf"><span>Appendix</span><small>PDF · 3.6 MB</small></a>
-          <a href="https://github.com/Junyi42/rats"><span>Code</span><small>GitHub repository ↗</small></a>
+        <div class="citation-box">
+          <button class="copy-button" type="button" data-copy-target="citation-code" aria-label="Copy BibTeX">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h12v12H8zM4 16V4h12"/></svg>
+            <span>Copy</span>
+          </button>
+          <pre id="citation-code">@inproceedings{rats2026playful,
+  title     = {Playful Agentic Robot Learning},
+  author    = {Anonymous Authors},
+  booktitle = {Conference on Robot Learning},
+  year      = {2026}
+}</pre>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="shell">
-      <p><strong>RATs</strong> · Playful Agentic Robot Learning</p>
-      <p>Project page for the 2026 paper.</p>
+  <a class="back-to-top" href="#top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </a>
+
+  <footer>
+    <div>
+      <strong>RATs</strong>
+      <span>Playful Agentic Robot Learning</span>
     </div>
+    <p>
+      Website design inspired by the
+      <a href="https://echo-bench.github.io/">ECHO project page</a>,
+      which is modified from <a href="https://nerfies.github.io/">Nerfies</a>.
+    </p>
   </footer>
 </body>
 </html>
