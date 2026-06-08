@@ -14,12 +14,9 @@
 <body id="top">
   <header class="hero">
     <div class="hero-inner">
-      <p class="kicker"><span>RATs</span> / Robotics Agent Team</p>
       <h1>Playful Agentic<br>Robot Learning</h1>
-      <p class="dek">Robots can practice before the task arrives.</p>
       <div class="rule"></div>
       <p class="authors">Anonymous Authors</p>
-      <p class="affiliation">CoRL 2026 Submission</p>
       <nav class="publication-links" aria-label="Publication links">
         <a class="button" href="assets/papers/playful-agentic-robot-learning.pdf">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6zM14 2v6h6M9 13h8M9 17h8"/></svg>
@@ -109,14 +106,8 @@
           <h2>Learning through purposeful play</h2>
           <p>RATs turns autonomous interaction into a persistent, reusable skill library.</p>
         </div>
-        <div class="method-tabs" role="tablist" aria-label="Method stages">
-          <button class="tab active" type="button" role="tab" aria-selected="true" data-tab="propose">1. Propose</button>
-          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="execute">2. Execute</button>
-          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="verify">3. Verify</button>
-          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="reuse">4. Reuse</button>
-        </div>
-        <div class="tab-panels">
-          <article class="tab-panel active" data-panel="propose">
+        <div class="method-grid">
+          <article class="method-stage">
             <div>
               <p class="panel-number">01</p>
               <h3>Find the competence frontier</h3>
@@ -124,7 +115,7 @@
             </div>
             <img src="assets/images/task-proposal.png" alt="Examples of RATs play task proposals">
           </article>
-          <article class="tab-panel" data-panel="execute" hidden>
+          <article class="method-stage">
             <div>
               <p class="panel-number">02</p>
               <h3>Plan and write robot code</h3>
@@ -132,21 +123,19 @@
             </div>
             <img src="assets/images/rats-method.png" alt="RATs agent team method overview">
           </article>
-          <article class="tab-panel" data-panel="verify" hidden>
+          <article class="method-stage text-stage">
             <div>
               <p class="panel-number">03</p>
               <h3>Turn failures into feedback</h3>
               <p>Goal and per-step verifiers localize failures. A diagnoser routes concrete feedback into retries or isolated SubAgent practice.</p>
             </div>
-            <img src="assets/images/code-comparison.png" alt="Comparison between direct code synthesis and learned skills">
           </article>
-          <article class="tab-panel" data-panel="reuse" hidden>
+          <article class="method-stage text-stage">
             <div>
               <p class="panel-number">04</p>
               <h3>Carry skills into future tasks</h3>
               <p>Successful routines become named code skills that can be retrieved, composed, and transferred to unseen environments.</p>
             </div>
-            <img src="assets/images/skill-transfer.png" alt="Play-to-evaluation skill transfer lineage">
           </article>
         </div>
       </div>
@@ -166,14 +155,10 @@
         </div>
         <figure class="wide-figure result-figure">
           <img src="assets/images/rats-sim-results.png" alt="Qualitative simulation comparisons">
-          <figcaption>Qualitative simulation results across LIBERO-PRO and MolmoSpaces.</figcaption>
         </figure>
 
         <div class="result-gallery-heading">
-          <div>
-            <h3>Result videos</h3>
-            <p>Three real-world demonstrations and six simulation demonstrations.</p>
-          </div>
+          <h3>Result videos</h3>
           <div class="filters" aria-label="Filter result videos">
             <button class="filter active" type="button" data-filter="all">All</button>
             <button class="filter" type="button" data-filter="real">Real world</button>
@@ -204,18 +189,6 @@
           <article class="result-video" data-kind="sim">
             <div class="video-placeholder sim"><span>SIM / 03</span><div class="play-mark"></div><code>simulation-03.mp4</code></div>
             <h4>LIBERO spatial generalization</h4><p>Adapting code skills to new arrangements.</p>
-          </article>
-          <article class="result-video" data-kind="sim">
-            <div class="video-placeholder sim"><span>SIM / 04</span><div class="play-mark"></div><code>simulation-04.mp4</code></div>
-            <h4>MolmoSpaces opening</h4><p>Geometry-aware grasp and pulling routines.</p>
-          </article>
-          <article class="result-video" data-kind="sim">
-            <div class="video-placeholder sim"><span>SIM / 05</span><div class="play-mark"></div><code>simulation-05.mp4</code></div>
-            <h4>MolmoSpaces picking</h4><p>Verified localization and top-down grasping.</p>
-          </article>
-          <article class="result-video" data-kind="sim">
-            <div class="video-placeholder sim"><span>SIM / 06</span><div class="play-mark"></div><code>simulation-06.mp4</code></div>
-            <h4>RoboSuite transfer</h4><p>Skills transferred across simulation environments.</p>
           </article>
         </div>
         <figure class="wide-figure real-world-figure">
@@ -273,6 +246,22 @@
             <p>Opening, closing, picking, and placement tasks retrieve distinct mixtures of learned perception, geometry, grasping, and motion helpers.</p>
           </div>
           <figure><img src="assets/images/eval-skill-category-heatmap.png" alt="Learned skill categories used during evaluation"><figcaption>Learned skill calls during MolmoSpaces evaluation.</figcaption></figure>
+        </div>
+        <div class="analysis-row reverse">
+          <div class="analysis-copy">
+            <span class="analysis-index">D</span>
+            <h3>Verification turns failures into reusable feedback</h3>
+            <p>Step-level checks expose where direct synthesis fails and give the agent concrete evidence for targeted retries and skill refinement.</p>
+          </div>
+          <figure><img src="assets/images/code-comparison.png" alt="Comparison between direct code synthesis and learned skills"><figcaption>Verification and learned skills reduce repeated low-level synthesis failures.</figcaption></figure>
+        </div>
+        <div class="analysis-row">
+          <div class="analysis-copy">
+            <span class="analysis-index">E</span>
+            <h3>Successful skills transfer beyond play</h3>
+            <p>Verified routines become persistent tools that can be retrieved and composed for downstream evaluation tasks.</p>
+          </div>
+          <figure><img src="assets/images/skill-transfer.png" alt="Play-to-evaluation skill transfer lineage"><figcaption>Skill lineage from autonomous play to downstream reuse.</figcaption></figure>
         </div>
         <figure class="wide-figure final-comparison">
           <img src="assets/images/capx-rats-comparison.png" alt="Comparisons between direct synthesis and RATs with learned skills">

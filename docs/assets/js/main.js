@@ -1,24 +1,3 @@
-const tabs = document.querySelectorAll("[data-tab]");
-const panels = document.querySelectorAll("[data-panel]");
-
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    const selected = tab.dataset.tab;
-
-    tabs.forEach((item) => {
-      const active = item === tab;
-      item.classList.toggle("active", active);
-      item.setAttribute("aria-selected", String(active));
-    });
-
-    panels.forEach((panel) => {
-      const active = panel.dataset.panel === selected;
-      panel.classList.toggle("active", active);
-      panel.hidden = !active;
-    });
-  });
-});
-
 const filters = document.querySelectorAll("[data-filter]");
 const resultVideos = document.querySelectorAll(".result-video");
 
