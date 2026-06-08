@@ -15,8 +15,4 @@ The pipeline overview remains a designed placeholder until
 
 ## Release Metadata
 
-Before public release, replace:
-
-- `Anonymous Authors`
-- the disabled `arXiv soon` control
-- the placeholder author field in the BibTeX entry
+Before public release, replace the disabled `arXiv soon` control.

@@ -16,16 +16,8 @@
     <div class="hero-inner">
       <h1>Playful Agentic<br>Robot Learning</h1>
       <div class="rule"></div>
-      <p class="authors">Anonymous Authors</p>
+      <p class="authors">Junyi Zhang*, Jiaxin Ge*, Hanjun Yoo*, Letian Fu, Zihan Yang, Yaowei Liu, Raj Saravanan, Shaofeng Yin, Justin Yu, Dantong Niu, Zirui Wang, Roei Herzig, Ken Goldberg, Yutong Bai, David M. Chan, Ion Stoica, Angjoo Kanazawa, Jiahui Lei, Haiwen Feng, Trevor Darrell</p>
       <nav class="publication-links" aria-label="Publication links">
-        <a class="button" href="assets/papers/playful-agentic-robot-learning.pdf">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6zM14 2v6h6M9 13h8M9 17h8"/></svg>
-          Paper
-        </a>
-        <a class="button" href="assets/papers/playful-agentic-robot-learning-appendix.pdf">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5"/></svg>
-          Appendix
-        </a>
         <a class="button" href="https://github.com/Junyi42/rats">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 18c-4 1-4-2-5-2m10 4v-3c0-1 .1-1.5-.5-2 2 0 4-.5 4-4 0-1-.4-2-1-2.5.1-.5.5-2-.1-2.5 0 0-1-.3-3 1a10 10 0 0 0-5 0c-2-1.3-3-1-3-1-.6 1.5-.2 2-.1 2.5C3.4 9 3 10 3 11c0 3.5 2 4 4 4-.5.4-.6 1-.5 2v3"/></svg>
           Code
@@ -63,8 +55,8 @@
           <strong>Contents</strong>
           <a href="#abstract">Abstract</a>
           <a href="#method">Method</a>
-          <a href="#results">Results</a>
           <a href="#deep-dive">Deep dive</a>
+          <a href="#results">Results</a>
           <a href="#analysis">Analysis</a>
           <a href="#bibtex">BibTeX</a>
         </aside>
@@ -142,6 +134,24 @@
       </div>
     </section>
 
+    <section class="section deep-dive-section" id="deep-dive">
+      <div class="narrow">
+        <div class="section-heading">
+          <h2>A team built around useful feedback</h2>
+        </div>
+        <figure class="wide-figure">
+          <img src="assets/images/rats-method.png" alt="Detailed RATs method diagram">
+          <figcaption>RATs couples task proposal, team execution, verification, diagnosis, and memory updates.</figcaption>
+        </figure>
+        <div class="detail-grid">
+          <article><b>Planning</b><h3>Ground the attempt</h3><p>The planner turns each proposed task into ordered steps and retrieves only the skills relevant to those steps.</p></article>
+          <article><b>Execution</b><h3>Write and run code</h3><p>The Policy Writer generates executable robot-control programs. A SubAgent isolates persistent local bottlenecks.</p></article>
+          <article><b>Verification</b><h3>See what worked</h3><p>Goal and per-step verifiers separate final success from intermediate progress and make retries more targeted.</p></article>
+          <article><b>Memory</b><h3>Keep the useful parts</h3><p>Successful behavior becomes reusable code; failures become compact lessons that shape future practice.</p></article>
+        </div>
+      </div>
+    </section>
+
     <section class="section results-section" id="results">
       <div class="wide">
         <div class="section-heading">
@@ -211,25 +221,6 @@
       </div>
     </section>
 
-    <section class="section deep-dive-section" id="deep-dive">
-      <div class="narrow">
-        <div class="section-heading">
-          <p class="eyebrow">Detailed method</p>
-          <h2>A team built around useful feedback</h2>
-        </div>
-        <figure class="wide-figure">
-          <img src="assets/images/rats-method.png" alt="Detailed RATs method diagram">
-          <figcaption>RATs couples task proposal, team execution, verification, diagnosis, and memory updates.</figcaption>
-        </figure>
-        <div class="detail-grid">
-          <article><b>Planning</b><h3>Ground the attempt</h3><p>The planner turns each proposed task into ordered steps and retrieves only the skills relevant to those steps.</p></article>
-          <article><b>Execution</b><h3>Write and run code</h3><p>The Policy Writer generates executable robot-control programs. A SubAgent isolates persistent local bottlenecks.</p></article>
-          <article><b>Verification</b><h3>See what worked</h3><p>Goal and per-step verifiers separate final success from intermediate progress and make retries more targeted.</p></article>
-          <article><b>Memory</b><h3>Keep the useful parts</h3><p>Successful behavior becomes reusable code; failures become compact lessons that shape future practice.</p></article>
-        </div>
-      </div>
-    </section>
-
     <section class="section analysis-section" id="analysis">
       <div class="wide">
         <div class="section-heading">
@@ -276,10 +267,6 @@
           </div>
           <figure><img src="assets/images/skill-transfer.png" alt="Play-to-evaluation skill transfer lineage"><figcaption>Skill lineage from autonomous play to downstream reuse.</figcaption></figure>
         </div>
-        <figure class="wide-figure final-comparison">
-          <img src="assets/images/capx-rats-comparison.png" alt="Comparisons between direct synthesis and RATs with learned skills">
-          <figcaption>Direct synthesis repeatedly rebuilds low-level logic; RATs composes named, reusable skills.</figcaption>
-        </figure>
       </div>
     </section>
 
@@ -296,7 +283,7 @@
           </button>
           <pre id="citation-code">@inproceedings{rats2026playful,
   title     = {Playful Agentic Robot Learning},
-  author    = {Anonymous Authors},
+  author    = {Junyi Zhang* and Jiaxin Ge* and Hanjun Yoo* and Letian Fu and Zihan Yang and Yaowei Liu and Raj Saravanan and Shaofeng Yin and Justin Yu and Dantong Niu and Zirui Wang and Roei Herzig and Ken Goldberg and Yutong Bai and David M. Chan and Ion Stoica and Angjoo Kanazawa and Jiahui Lei and Haiwen Feng and Trevor Darrell},
   booktitle = {Conference on Robot Learning},
   year      = {2026}
 }</pre>
