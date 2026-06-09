@@ -16,7 +16,12 @@
     <div class="hero-inner">
       <h1>Playful Agentic<br>Robot Learning</h1>
       <div class="rule"></div>
-      <p class="authors">Junyi Zhang*, Jiaxin Ge*, Hanjun Yoo*, Letian Fu, Zihan Yang, Yaowei Liu, Raj Saravanan, Shaofeng Yin, Justin Yu, Dantong Niu, Zirui Wang, Roei Herzig, Ken Goldberg, Yutong Bai, David M. Chan, Ion Stoica, Angjoo Kanazawa, Jiahui Lei, Haiwen Feng, Trevor Darrell</p>
+      <div class="authors">
+        <span>Junyi Zhang*,†, Jiaxin Ge*,†, Hanjun Yoo*, Letian Fu‡, Zihan Yang‡, Yaowei Liu‡, Raj Saravanan‡</span>
+        <span>Shaofeng Yin, Justin Yu, Dantong Niu, Zirui Wang, Roei Herzig, Ken Goldberg, Yutong Bai, David M. Chan</span>
+        <span>Ion Stoica, Angjoo Kanazawa, Jiahui Lei§, Haiwen Feng§, Trevor Darrell</span>
+        <small>*,‡,§: equal contribution; †: project leads, ordered by coin flip</small>
+      </div>
       <nav class="publication-links" aria-label="Publication links">
         <a class="button" href="https://github.com/Junyi42/rats">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 18c-4 1-4-2-5-2m10 4v-3c0-1 .1-1.5-.5-2 2 0 4-.5 4-4 0-1-.4-2-1-2.5.1-.5.5-2-.1-2.5 0 0-1-.3-3 1a10 10 0 0 0-5 0c-2-1.3-3-1-3-1-.6 1.5-.2 2-.1 2.5C3.4 9 3 10 3 11c0 3.5 2 4 4 4-.5.4-.6 1-.5 2v3"/></svg>
@@ -161,8 +166,8 @@
         <div class="result-groups" aria-label="Headline results">
           <section class="result-group" aria-labelledby="in-domain-heading">
             <div class="result-group-heading">
-              <p class="eyebrow">In-domain improvement</p>
-              <h3 id="in-domain-heading">Skills improve downstream performance</h3>
+              <h3 id="in-domain-heading">In-domain improvement</h3>
+              <p>Skills improve downstream performance.</p>
             </div>
             <div class="metrics">
               <article><span>+20.6</span><strong>pp</strong><p>LIBERO-PRO over CaP-Agent0</p></article>
@@ -171,8 +176,7 @@
           </section>
           <section class="result-group" aria-labelledby="generalization-heading">
             <div class="result-group-heading">
-              <p class="eyebrow">Cross-environment / sim-to-real generalization</p>
-              <h3 id="generalization-heading">A plug-and-play skill library</h3>
+              <h3 id="generalization-heading">Cross-environment / sim-to-real generalization</h3>
               <p>RATs skills plug into different simulation environments and real-world settings without task-specific model finetuning.</p>
             </div>
             <div class="metrics">
