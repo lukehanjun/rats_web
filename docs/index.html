@@ -158,11 +158,28 @@
           <p class="eyebrow">Results</p>
           <h2>Play pays off downstream</h2>
         </div>
-        <div class="metrics" aria-label="Headline results">
-          <article><span>+20.6</span><strong>pp</strong><p>LIBERO-PRO over CaP-Agent0</p></article>
-          <article><span>+17.0</span><strong>pp</strong><p>MolmoSpaces over CaP-Agent0</p></article>
-          <article><span>+8.9</span><strong>pp</strong><p>RoboSuite cross-environment transfer</p></article>
-          <article><span>+8.8</span><strong>pp</strong><p>Preliminary real-world transfer</p></article>
+        <div class="result-groups" aria-label="Headline results">
+          <section class="result-group" aria-labelledby="in-domain-heading">
+            <div class="result-group-heading">
+              <p class="eyebrow">In-domain improvement</p>
+              <h3 id="in-domain-heading">Skills improve downstream performance</h3>
+            </div>
+            <div class="metrics">
+              <article><span>+20.6</span><strong>pp</strong><p>LIBERO-PRO over CaP-Agent0</p></article>
+              <article><span>+17.0</span><strong>pp</strong><p>MolmoSpaces over CaP-Agent0</p></article>
+            </div>
+          </section>
+          <section class="result-group" aria-labelledby="generalization-heading">
+            <div class="result-group-heading">
+              <p class="eyebrow">Cross-environment / sim-to-real generalization</p>
+              <h3 id="generalization-heading">A plug-and-play skill library</h3>
+              <p>RATs skills plug into different simulation environments and real-world settings without task-specific model finetuning.</p>
+            </div>
+            <div class="metrics">
+              <article><span>+8.9</span><strong>pp</strong><p>RoboSuite cross-environment transfer</p></article>
+              <article><span>+8.8</span><strong>pp</strong><p>Preliminary real-world transfer</p></article>
+            </div>
+          </section>
         </div>
         <figure class="wide-figure result-figure">
           <img src="assets/images/rats-sim-results.png" alt="Qualitative simulation comparisons">
