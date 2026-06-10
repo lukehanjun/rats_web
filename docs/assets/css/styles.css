@@ -132,9 +132,10 @@ code, pre { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospac
 .demo-lead { padding-top: 20px; background: white !important; }
 .pipeline-video {
   display: block;
-  width: min(100%, 760px);
+  width: min(calc(100vw - 48px), 1140px);
   height: auto;
-  margin: 0 auto;
+  margin-left: 50%;
+  transform: translateX(-50%);
   border: 1px solid #b9b9b4;
   border-radius: 5px;
   background: #111;
